@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact us</title>
+
+<style>
+
+.button12
+{
+  position: relative;left:30px; top:30px;
+  background-color: white; padding:5px; width:100px;
+}
+
+.pp
+{
+  color:DodgerBlue;
+}
+
+legend
+{
+  color:orange;
+}
+
+#back
+{
+  position: relative;left:30px; top:30px;
+  background-color: white; padding:5px; width:100px;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<button  id="back" onclick="goback()" >Back</button>
+
+
+<center>
+
+<form action="mailto:destinationparadox@zohomail.com?subject=Complaint/Query" method="post" enctype="text/plain">
+<fieldset style="width:400px;">
+<legend>Contact Us</legend>
+<span class="pp">Name:</span><br>
+<input type="text" name="Name : "><br><br>
+<span class="pp">Email:</span><br>
+<input type="text" name="Mail Id: "><br><br>
+<span class="pp">Query / Complaint:</span><br>
+<input type="text" name="Complaint : " size="50"><br>
+<input type="submit" class="button12" value="Send"> &emsp;
+<input type="reset" class="button12" value="Reset">
+<br><br><br><br><br>
+</fieldset>
+</form>
+
+</center>
+</body>
+
+
+<script type="text/javascript">
+
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+  x.loop=true;
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+
+function goback()
+{
+  window.open("mainpage.html","_self");
+}
+</script>
+
+
+
+</html>

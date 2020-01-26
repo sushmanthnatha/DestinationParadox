@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style>
+
+#wel
+{  color: DodgerBlue; font-size: 30px;}
+
+.b1,.b2
+{ padding: 20px; background-color: black;  text-decoration: none;
+  background-color: #333; color:#f2f2f2;  display:inline-block; width:100px;
+}
+
+.b1:hover,.b2:hover  { background-color: DodgerBlue;}
+
+.b2{
+  width: 100px;
+  position: relative;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: example2;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  /* Standard syntax */
+  animation-name: example2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example2 {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:150px;}
+  75%  {left:0px; top:150px;}
+  100% {left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example2 {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:150px;}
+  75%  {left:0px; top:150px;}
+  100% {left:0px; top:0px;}
+}
+
+.b1 {
+  width: 100px;
+  position: relative;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: example1;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  /* Standard syntax */
+  animation-name: example1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example1 {
+  0%   {left:0px; top:0px;}
+  25%  {left:-200px; top:0px;}
+  50%  {left:-200px; top:150px;}
+  75%  {left:0px; top:150px;}
+  100% {left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example1 {
+  0%   {left:0px; top:0px;}
+  25%  {left:-200px; top:0px;}
+  50%  {left:-200px; top:150px;}
+  75%  {left:0px; top:150px;}
+  100% {left:0px; top:0px;}
+}
+
+#back
+{
+  position: relative;left:30px; top:30px;
+  background-color: white; padding:5px; width:100px;
+}
+
+html
+{
+  overflow-y: hidden;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<button  id="back" onclick="goback()" >Back</button>
+
+
+<center>
+<div id="wel"><b>
+<p>Welcome</p>
+<p>To</p>
+<p>Destination Paradox</p></b>
+</div>	
+<br><br>
+
+<a class="b1" href="playerlogin1.html" target="_self">Player</a> &nbsp;
+<a class="b2" href="adminlogin.html" target="_self">Admin</a> &nbsp;
+
+</center>
+
+
+
+</body>
+
+
+<script type="text/javascript">
+
+
+function goback()
+{
+  window.open("homepage1.html","_self");
+}
+</script>
+
+
+</html>

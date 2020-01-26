@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+<style>
+
+
+#form_out
+{  background-color: black; color:white; 
+    width:300px; padding:20px; height: 250px; padding-top: 50px;
+}
+
+#sbutton
+{
+  background-color: white; padding:5px; width:100px;
+}
+
+
+
+#back
+{
+  position: relative;left:30px; top:30px;
+  background-color: white; padding:5px; width:100px;
+}
+
+
+</style>
+
+
+<script>
+function validateForm() {
+  
+    var a = document.forms["myForm"]["qname"].value;
+
+    var c = document.forms["myForm"]["quname"].value;
+    var d = document.forms["myForm"]["qpass"].value;
+
+     if (a == null || a == ""  || c == null || c == "" || d == null || d == "") 
+      {
+      alert("Please Fill All Required Field");
+      return false;
+    }
+  }
+
+</script>
+
+
+</head>
+
+
+<body style="background-image: url('loginbg.jpg'); background-repeat: repeat-x;">
+   
+<button  id="back" onclick="goback()" >Back</button>
+
+
+ <br><br>
+
+<center>
+ <div id="form_out">
+ <center>
+ <form  name="myForm" action="/cgi-bin/playersignup.py" method="post"  onsubmit="return validateForm()">
+ 	<legend>Player Signup</legend>
+ 	<br>
+ 	<label for="qname">Name</label> &emsp; &emsp; &nbsp;
+ 	<input type="text" name="qname" required="required" pattern="[A-Za-z]{1,20}" ><br>
+
+ 	<br>
+ 	<label for="qemail">Email :</label> &emsp; &emsp; 
+ 	<input type="email" name="qemail" ><br>
+    
+   
+    
+ 	<br>
+ 	<label for="quname">Username</label> &emsp; 
+ 	<input type="text" name="quname" required="required" pattern="[A-Za-z0-9]{1,20}"><br>
+ 	
+ 	<br>
+ 	<label for="qpass">Password</label>  &emsp;
+ 	<input type="password" name="qpass" id="mypass" required="required" pattern="[A-Za-z0-9]{1,20}"><br>
+    <br>
+    &emsp;&emsp;
+    <input type="checkbox" onclick="myFunction()">Show Password
+ 	<br><br>
+    &emsp;&emsp;&emsp;&emsp;  <input type="submit" id="sbutton"value="Sign Up">
+ </form>
+</center>
+</div>
+</center>
+
+</body>
+
+<script type="text/javascript">
+
+
+function goback()
+{
+  window.open("/playerlogin.html","_self");
+}
+
+
+function myFunction() {
+  var x = document.getElementById("mypass");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+</html>

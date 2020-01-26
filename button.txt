@@ -1,0 +1,23 @@
+cd ../../Apache24/bin
+
+
+#back
+{
+  position: relative;left:30px; top:30px;
+  background-color: white; padding:5px; width:100px;
+}
+
+
+
+<button  id="back" onclick="goback()" >Back</button>
+
+
+
+<script type="text/javascript">
+
+
+function goback()
+{
+  window.open("homepage1.html","_self");
+}
+</script>

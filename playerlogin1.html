@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+<style>
+
+
+#form_out
+{  background-color: black; color:white; 
+    width:300px; padding:20px; height: 280px; padding-top: 50px;
+}
+
+#sbutton
+{
+  background-color: white; padding:5px; width:100px;
+}
+
+
+
+#back,#signup
+{
+  position: relative;left:30px; top:30px;
+  background-color: white; padding:5px; width:100px;
+}
+
+
+</style>
+
+
+
+
+</head>
+
+
+<body style="background-image: url('loginbg.jpg'); background-repeat: repeat-x;">
+   
+<button  id="back" onclick="goback()" >Back</button>
+
+
+ <br><br>
+
+<center>
+ <div id="form_out">
+ <center>
+ <form action="/cgi-bin/playerlogin.py" method="post">
+ 	<legend>Player Login</legend>
+ 	<br><br>
+ 	<label for="uname">Username</label> &emsp; 
+ 	<input type="text" name="uname" ><br>
+ 	
+ 	<br><br>
+ 	<label for="pass">Password</label>  &emsp;
+ 	<input type="password" name="pass"><br>
+    <br> &emsp;&emsp;
+    <a style="color:white" href="passrec.html" target="_self">Forgot password ?</a>
+ 	<br><br>
+    &emsp;&emsp;&emsp;&emsp;  <input type="submit" id="sbutton"value="Login"> &emsp;
+   
+ </form>
+
+</center>
+<p>Don't have an account ? &nbsp; <a href="playersignup.html" target="_self">  Sign up </a></p>
+</div>
+</center>
+
+</body>
+
+<script type="text/javascript">
+
+
+function goback()
+{
+  window.open("homepage1.html","_self");
+}
+</script>
+
+
+
+
+</html>

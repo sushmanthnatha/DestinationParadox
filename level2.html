@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#myDIV {
+	width: 100%;
+  	height: 360px;
+  	text-align: center;
+  	background-color: lightblue;
+  	margin-top: 20px;
+}
+
+#back
+{
+  position: relative;left:30px; top:30px;
+  background-color: white; padding:5px; width:100px;
+}
+
+
+#myDIV2{
+  	width: 100%;
+  	height: 300px;
+  	padding: 50px ;
+  	text-align: center;
+  	margin-top: 20px;
+}
+#mypara1 {
+  	position: relative;
+  	text-align: center;
+  	font-size : 38px; 
+}
+#mypara2 {
+  	position: relative;
+  	text-align: center;
+  	font-size : 38px;
+  	visibility : hidden
+}
+.wrapper {
+    	text-align: center;
+}
+.but1 {
+    	position: absolute;
+    	top: 38%;
+	left: 10px
+}
+.digi1{
+	position: absolute;
+    	right: 30px;
+	bottom: 400px;
+	background-color: #44444;
+	color: #ff0000;
+	font-size: 20px;
+}
+.digi2{
+	position: absolute;
+    	right: 30px;
+	bottom: 400px;
+	background-color: #44444;
+	color: #ff0000;
+	font-size: 20px;
+	visibility : hidden;
+}
+#cdoor{
+	position: absolute;
+    	right: 30px;
+	bottom: 45px;	
+}
+#odoor{
+	position: absolute;
+    	right: 30px;
+	bottom: 45px;
+	visibility : hidden;
+}
+<!--always have para 1 and 2 with the same specs to keep the game in centre;the function for digital clock will also be the same;-->
+</style>
+</head>
+<body>
+<button  id="back" onclick="goback()" >Back</button>
+<p id="mypara1">Its the time to Disco</p>
+<p id="mypara2">Go home you're Drunk</p>
+
+<div class="wrapper">
+<button class="but1" onclick="myFunction()"><img src="bulb.png" height="40"></button>
+</div>
+<div id="myDIV">
+</div>
+<!--Door code-->
+<button id="cdoor" onclick="checkdoor()" ><img src="closeddoor.jpg" height="250" width="140"></button>
+<button onclick="window.open('fortytwolevel.html','_self');"><img src="opendoor.jpeg" id="odoor" height="250" width="140"></button>
+<!--Digital clock-->
+<button class="digi1" id="d0" onclick="mydigi()" >12:00</button>
+<button class="digi2" id="d1" onclick="mydigi()" >1:00</button>
+<button class="digi2" id="d2" onclick="mydigi()" >2:00</button>
+<button class="digi2" id="d3" onclick="mydigi()" >3:00</button>
+<button class="digi2" id="d4" onclick="mydigi()" >4:00</button>
+<button class="digi2" id="d5" onclick="mydigi()" >5:00</button>
+<button class="digi2" id="d6" onclick="mydigi()" >6:00</button>
+<button class="digi2" id="d7" onclick="mydigi()" >7:00</button>
+<button class="digi2" id="d8" onclick="mydigi()" >8:00</button>
+<button class="digi2" id="d9" onclick="mydigi()" >9:00</button>
+<button class="digi2" id="d10" onclick="mydigi()" >10:00</button>
+<button class="digi2" id="d11" onclick="mydigi()" >11:00</button>
+<script>
+var count=0;
+var count2=0;
+function myFunction(){
+  	var x = document.getElementById("myDIV");
+  	if (x.style.display === "none")
+    		x.style.display = "block";
+	else
+    		x.style.display = "none";
+  	count++;
+  	if(count>=10){
+  		document.getElementById("mypara1").style.visibility = "hidden";
+  		document.getElementById("mypara2").style.visibility = "visible";
+		document.getElementById("cdoor").style.visibility = "hidden";
+		document.getElementById("odoor").style.visibility = "visible";
+  	}
+}
+
+function goback()
+{
+  window.open("homepage1.html","_self");
+}
+function mydigi(){
+	count2++;
+	cttrue=count2%12;
+	switch(cttrue){
+		case 0:
+			document.getElementById("d11").style.visibility = "hidden";
+			document.getElementById("d0").style.visibility = "visible";
+			break;
+		case 1:
+			document.getElementById("d0").style.visibility = "hidden";
+			document.getElementById("d1").style.visibility = "visible";
+			break;
+		case 2:
+			document.getElementById("d1").style.visibility = "hidden";
+			document.getElementById("d2").style.visibility = "visible";
+			break;
+		case 3:
+			document.getElementById("d2").style.visibility = "hidden";
+			document.getElementById("d3").style.visibility = "visible";
+			break;
+		case 4:
+			document.getElementById("d3").style.visibility = "hidden";
+			document.getElementById("d4").style.visibility = "visible";
+			break;
+		case 5:
+			document.getElementById("d4").style.visibility = "hidden";
+			document.getElementById("d5").style.visibility = "visible";
+			break;
+		case 6:
+			document.getElementById("d5").style.visibility = "hidden";
+			document.getElementById("d6").style.visibility = "visible";
+			break;
+		case 7:
+			document.getElementById("d6").style.visibility = "hidden";
+			document.getElementById("d7").style.visibility = "visible";
+			break;
+		case 8:
+			document.getElementById("d7").style.visibility = "hidden";
+			document.getElementById("d8").style.visibility = "visible";
+			break;
+		case 9:
+			document.getElementById("d8").style.visibility = "hidden";
+			document.getElementById("d9").style.visibility = "visible";
+			break;
+		case 10:
+			document.getElementById("d9").style.visibility = "hidden";
+			document.getElementById("d10").style.visibility = "visible";
+			break;
+		case 11:
+			document.getElementById("d10").style.visibility = "hidden";
+			document.getElementById("d11").style.visibility = "visible";
+			break;
+	}
+}
+</script>
+</body>
+</html>

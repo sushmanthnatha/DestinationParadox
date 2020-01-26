@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Escape Room - An interesting game</title>
+	<link rel="stylesheet"  type="text/css" href="home.css">
+<style type="text/css">
+#head1
+ {  color:#FFA600; }
+
+
+#homeframe
+ { 
+ 	position: relative;
+ 	left:-7px; 
+  top:-20px;
+    width:1250px;
+    height: 550px;
+
+ }
+
+p
+{
+	position: relative; left:100px; top:-20px;
+}
+
+button
+{
+ background-color: white;
+ color:white;
+}
+
+	
+</style>
+
+</head>
+
+
+<body>
+
+
+<button onclick="playAudio()" type="button">Start</button>
+<button onclick="pauseAudio()" type="button" style="float:right">Stop</button> 
+
+   <center>
+   	<h1 id="head1">Destination Paradox</h1>
+   	<p>-An online escape room</p>
+
+   <iframe src="homepage1.html" id="homeframe"></iframe>
+</center>
+
+
+<audio id="myAudio" autoplay>
+  <source src="bgm.ogg" type="audio/ogg">
+  <source src="bgm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+
+
+<script>
+
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+  x.loop=true;
+
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+<style>
+
+
+#form_out
+{  background-color: black; color:white; 
+    width:300px; padding:20px; height: 250px; padding-top: 50px;
+}
+
+#sbutton, #back
+{
+  background-color: white; padding:5px; width:100px;
+}
+
+#back
+{
+	position: relative;
+	left:50px;
+}
+
+
+</style>
+
+
+
+
+</head>
+
+
+<body style="background-image: url('loginbg.jpg'); background-repeat: repeat-x;">
+   
+
+ <br><br>
+<button  id="back" onclick="goback()" >Back</button>
+<center>
+ 
+<div id="form_out">
+ <center>
+ 
+ 	<legend>Admin Login</legend>
+ 	
+ 	<br><br>
+ 	<label for="pass">Password</label>  &emsp;
+ 	<input type="password" id="pass" onfocus="document.getElementById('ppp').innerHTML='';"><br>
+ 
+    <p id="ppp"></p><br>
+    &emsp;&emsp;&emsp;&emsp; 
+    <button  id="sbutton" onclick="checkadmin()" >Login</button>
+    <br>
+
+
+    <br>
+
+ 
+</center>
+</div>
+</center>
+
+</body>
+
+
+<script type="text/javascript">
+
+
+function goback()
+{
+  window.open("homepage1.html","_self");
+}
+
+
+
+
+function checkadmin()
+{
+
+var x1=document.getElementById('pass').value;
+
+if( x1 == "qwerty123")
+{ document.getElementById("ppp").innerHTML="Verified Successfully";
+ setTimeout(function(){ window.open("adminhome.html","_self"); }, 2000);
+ 
+}
+else
+{
+document.getElementById("ppp").innerHTML="Incorrect password";
+}
+
+}
+
+
+
+</script>
+
+
+</html>
